@@ -29,4 +29,25 @@ lets explain it now:
 </body>                                       
 </html>                                // there html is closed
 
+##lets write someting in html
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>hemel</p>          // in there i create a paragraph tag and inside i wrote hemel
+  </body>
+</html>
+
+
+//in web page its showing hemel
+
+imp : if you press ctrl + / than it will commentout , and you know what is comment in programming
+
 
