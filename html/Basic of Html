@@ -1,0 +1,32 @@
+Date: 17/03/26
+
+Html is Hyper Text markup language
+its basically make structure of a web page.
+
+## creation of html:
+in vs file you have to make the folder name index.html
+index.html is the default home of every web page.
+
+In html you have to use tag to do your work for example:
+
+<p> hlw </p>
+this is a tag of html name paragraph tag.
+most of the tag are same like it.
+
+Lets explore a basic html code, how a html code look like
+you have to enter ! on vs code it will auto generate a code for you:
+lets explain it now:
+
+<!DOCTYPE html>                             // its tell the browser you are using html
+<html lang="en">                             // form there html is started. its a opening of a tag ,its end in last
+<head>                                      // in head tag you will tell some data ,but it will not appear on your browser
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>                    
+</head>                                      // in there head is closed
+<body>                                        // this is body opening and we will do everyting inside it.
+  
+</body>                                       
+</html>                                // there html is closed
+
+
