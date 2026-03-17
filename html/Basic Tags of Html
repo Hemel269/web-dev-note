@@ -1,1 +1,63 @@
 Date: 17/03/26
+
+
+#Html attribute:
+is use for give more info about code 
+<html lan="english">
+
+^^inside of body you will use this all tags
+
+1. Heading Tags:                        //1. Heading Tag
+it use for create a heading in html .
+there are 6 of it and here is example:
+
+<h1>this is heading 1</h1>        //heading 1 it will be big
+<h2>this is heading 2</h2>        // heading 2 smaller than headin 1
+
+output:
+this is heading 1
+this is heading 2
+
+^^imp: never use heading for big and small text it use for which one is main heading like 1 is important than 2 .
+
+2. Paragraph Tags:                        // 2. Paragraph tag
+it use for write paragraph.
+
+<p>this is paragraph tag</p>            // <p> is opening and </p> is closing
+
+output:
+this is pragraph tag.
+
+3. Anchor Tag:                                  //3. Anchor Tag
+it use for add link in your page
+
+syntex: <a attribute="your link">Link name</a>
+
+for example:
+<a href="www.google.com">Google</a>            // herf is attribute which take value 
+
+output:
+Google 
+but it will open this given link.
+
+^^Imp : you can use it for going on another page on your code just put the page neme in attribute.
+if you go your code page its raleative link if anyother page than is absolute link
+
+4.Image Tag :                                        //4. Image tag
+use to add image in your page
+
+syntex: <img src="image link" alt= "if not show image what you wanna say"/>  // src and alt is attribute
+in here src in attribute and alt is attribute
+
+exaple:
+<img src="https://hero.fandom.com/wiki/Batman" alt="batman image" />
+output:
+batman image
+
+
+
+
+
+
+
+
