@@ -86,3 +86,14 @@ use it inside paragraph tag
 it use for same to same your text, even your space will count
 <pre> your text , it will be same to smae</pre>
 
+
+## Addition in Anchor tag:
+
+<a href="www.google.com">Google</a>
+it will open in your page, but if you want another page to open use it
+
+<a href="www.google.com" target="_main">Google</a>
+
+terget=_main will make it into next page.
+
+and if you want without the name use image than insert an image tag inside anchor tag.
