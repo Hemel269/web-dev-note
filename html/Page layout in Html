@@ -38,3 +38,25 @@ Footer : Your footer
 
 ^^ these tag are mainly use for boost your SEO.
 
+
+## div tag:
+
+<div>
+content
+</div>
+
+^^it use for giving you  full wide space in separete section.
+so you change just div all element will be changed.
+you can imagine it like a block div is a block
+and its content obtain full weight
+
+##
+
+
+
+
+
+
+
+
+
