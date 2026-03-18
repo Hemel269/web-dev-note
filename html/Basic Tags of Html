@@ -56,10 +56,33 @@ batman image
 
 ^^imp : you can change size by html but use it bia css
 
+Date: 18/03/2026
 
+5. br tag: it use for make content in next line                 //br tag
+6. bold ,italic and underline: it use for making text special      // bold italic and underline
+syntex:
+Bold : <b> your text </b> , 
+italic: <i>your text<i/>,
+underline: <u>your text</u>
 
+^^imp : you can use it in paragraph tag.
 
+7. Big small text tag: use for making text big and small        // big and small text tag
+example
+Big : <big>your text</big>
+Small : <small>your text<small>
 
+8: hr tag                                                     // hr tag
+it use for crate horizintal rule 
+just use <hr> for getting horizintil line
 
+9. sub and super tag: use in mathemathic and chemistry           //sub tag
+syntex:
+<sub>3<sub>
+<sup>5<sup>
+use it inside paragraph tag
 
+10. Pre tag:                                                            //pre tag
+it use for same to same your text, even your space will count
+<pre> your text , it will be same to smae</pre>
 
