@@ -1,0 +1,40 @@
+Date: 18/03/26
+
+Page layout is use for easy user experience and ralaybility
+it bost the SEO of a website
+
+lets start:
+
+#Symintic tag:
+header, main , footer
+
+1. Header: Its use for adding header
+syntex: <header> your content </header>
+
+^^imp : so you have to put your header in head tag it is the best way to do coding.
+it can make huge impect on your code.
+if you use it your all header will get a own section.
+
+2. Footer: Its use for adding your footer in webpage
+syntex: <footer> your footer <footer>
+
+3. Main : its use for adding your main content you wanna show to your page
+syntex:
+<main> 
+your all element
+</main>
+
+^^you will use all of your content inside main tag.
+
+recap: firstly we devide our page in 3 part.
+Header : your header
+Main : your all main content
+Footer : Your footer
+
+
+## Section : use for separete your section
+## Article : ues for create your article.
+## Aside : use for show not your content. google will not count .
+
+^^ these tag are mainly use for boost your SEO.
+
