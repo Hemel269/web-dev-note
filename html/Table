@@ -1,0 +1,57 @@
+Date: 19/03/26
+
+## Table
+you can show data by table.
+
+Table = <table>
+Row = <tr>
+Header = <th>  //it will give bold text
+Data = <td>
+
+example:
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+
+  <tr>
+    <td>Hemel</td>
+    <td>22</td>
+  </tr>
+
+  <tr>
+    <td>Bhai</td>
+    <td>24</td>
+  </tr>
+</table>
+
+^^ Caption:
+you can add table capion by this
+<caption> your caption</caption>
+
+
+^^ Table head and Table body:
+you can use it for structure.
+its not visible in font but in inspect its visible.
+
+syntex:
+
+<thead>
+your table header
+</thead>
+
+
+<tbody>
+your all table data
+<tbody>
+
+^^ Callspan"
+its use for one header for many data
+
+syntex:
+<th callspan="how much you want">
+your header
+<th>
+
