@@ -1,0 +1,55 @@
+Date: 19/03/26
+
+## List:
+List are represent data in your page
+
+^^ Mostly two type of list 
+order list and unorder list.
+
+^^Unorder list:
+syntex:
+<ul>
+<li>your data,</li>
+</ul>
+
+example:
+<ul>
+<li>Gym</li>
+<li>JavaScript</li>
+<li>IELTS</li>
+</ul>
+
+output:
+Gym
+JavaScript
+IELTS
+
+^^imp: it will give you list without number just bullet point.
+you can change bulletpoint by css
+
+^^ Order list:
+syntex:
+<ol>
+<li> your data<li>
+</ol>
+
+example:
+<ol>
+  <li>Wake up</li>
+  <li>Workout</li>
+  <li>Study JavaScript</li>
+</ol>
+
+output:
+1.Wake up
+2.Workout
+3.Study JavaScript
+
+^^ it will give your number with it
+
+##you can create list inside a list tag.
+
+
+
+
+
