@@ -50,7 +50,14 @@ so you change just div all element will be changed.
 you can imagine it like a block div is a block
 and its content obtain full weight
 
-##
+##span tag:
+
+<span>
+content
+</span>
+
+^^its is also a block tag but its not get space like div.
+its just take the small space it need.
 
 
 
