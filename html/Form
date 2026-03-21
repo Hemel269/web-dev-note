@@ -2,3 +2,56 @@ Date: 19/03/26
 ## form
 use for creating form llike login,feedback or just a form.
 
+
+<form action="#" method="POST">                  //form creation
+
+  <label>Name:</label>                        //use label
+  <input type="text"><br><br>                        //text input
+
+  <label>Email:</label>
+  <input type="email"><br><br>                        //email input
+
+  <label>Password:</label>
+  <input type="password"><br><br>                      //password input
+
+  <label>Gender:</label>
+  <input type="radio" name="gender"> Male                   //radio input(chose one)
+  <input type="radio" name="gender"> Female<br><br>
+
+  <label>Hobbies:</label>                                  //checkbox input (select multiple)
+  <input type="checkbox"> Cricket
+  <input type="checkbox"> Football<br><br>
+
+  <label>City:</label>
+  <select>                                                //select input (dropdown)
+    <option>Dhaka</option>
+    <option>Chittagong</option>
+  </select><br><br>
+
+  <button type="submit">Submit</button>                      //submit button
+
+</form>
+
+I was already write it but forget to save thats why its a AI verstion of form but undrestable..
+
+^^ Some attribute:
+<input type="text" name="username">                                         //name
+
+<input type="radio" name="gender" value="male">                            //value
+<input type="radio" name="gender" value="female">
+
+
+<input type="text" placeholder="Enter your name">                              //placeholder
+
+
+<input type="email" required>                                          //required
+
+
+<label for="email">Email:</label>                                        //for and id
+<input id="email" type="email">
+
+
+
+
+
+
