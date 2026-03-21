@@ -1,0 +1,61 @@
+## css is cascading style sheet
+where you can style the structure of a pages.
+
+## you can use css in three style
+1. inline : its mean in html page and same line you will add css
+2. style block: its mean in html page you will do it in a block
+3.another page for css : its the most professional style to do. you will create another page for styling
+and connect the html and css:
+<link rel='stylesheet" herf="style.css">                           // adding css in html
+
+basic syntex:
+h1 {
+  color: green;
+}
+
+#1: Color:
+you can select color by using color
+
+2. background-color: using this you can change backgorund color
+3.RGB and HEX : you can chose color by using this . for hex use #
+example;
+h1 {
+  color: green;                                         //forground color
+  background-color: rgb(22, 22, 22);                    //background color changed by rgb
+}
+h2 {
+  background-color: #f0099f;                            //changing color by hex #
+}
+^^imp: don't remember clolor you can get them from google//
+
+
+
+
+##Selector:                                                              //selector in css
+
+1. universel selector:
+*{}
+you can use it for whole page
+
+2.Element selector:
+h1{}
+it using for tergeting single element it can be big or small
+
+3.Id selector:
+sometimes we need to change single item from block so we can give him a ID and we can acess it
+#idname{}
+use #
+
+4.class selector:
+sometimes we have to change some of them ,this time we give some tag smae class name for easily acess it.
+.classname{}
+must use dot 
+
+
+
+
+
+
+
+
+
