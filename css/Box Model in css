@@ -1,0 +1,96 @@
+Date: 22/03/26
+in html every content apper in box if you inspect you will notice
+and box model is use for select and change it
+
+suppose you have a content on html
+
+content hight= hight
+content weight= weidght
+conten border = border
+space between border and content= padding
+one contet to other content space = margin
+
+1.hight:
+use for selecting content hight.
+div {
+  height: 100px;
+}
+i am using div
+
+2.widght:
+use for selecrting content width
+div {
+  width: 100px;
+}
+
+3.Border:
+for selecting border element
+
+^^ border: if you use these you can control these three things by one line
+^^border-weidght: use for giving border weight
+^^border-color : use for selecting border color
+^^border-style: use for border style like dotted,solid,dashed
+exm:
+div {
+  border-width: 2px;
+  border-color: brown;
+  border-style: dotted;
+}
+^^border-radious: 
+it use for making box edge soft or round.
+you can use it by px or %
+
+
+^^imp: now if after using box the other eliment will be use in box not full page.
+like if i select text alignmet on center it will make the text in center
+
+
+4. Padding:
+it use for some gap between content and border.
+and it have side right left top buttom
+you can select px for left right tip bottom
+lastly if you give only paddaing px value it will auto select lrtb all same value.
+
+5. Margin:
+its is use for gapping one box to second box
+it also have left right top buttom
+you can give it via px
+and only margin is give you symitrical shape to box to box
+
+
+Practice question:
+1.create a navigation bar using these:
+
+* {
+  padding: 0%;
+  margin: 0%;
+  color: white;
+}
+#nbar {
+  background-color: #0f1111;
+  height: 60px;
+}
+button {
+  background-color: #f08804;
+}
+#logo {
+  color: #f08804;
+}
+
+a {
+  margin-right: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
