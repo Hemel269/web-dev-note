@@ -49,7 +49,56 @@ use #
 4.class selector:
 sometimes we have to change some of them ,this time we give some tag smae class name for easily acess it.
 .classname{}
-must use dot 
+must use dot .
+
+
+
+##Text-properties.
+
+1. Text-align: 
+its use for align your text
+left,center and right
+
+2.text-decoration:
+use for underline,cut
+
+3.text-weight:
+for text weight like normal/bold/light/bolder/lighter
+or you can select by number 100 to 900
+
+4.font-family:
+use for select font stle .
+you can google it 
+
+5.font-size:
+use for select text size (use px for it)
+96px= 1 nch
+
+6.line-hight:
+use for changing line hight.
+you will select it via px.
+if many line but you select small pixel than it will be overlap
+you can select it normal
+
+7.text-transform:
+its use for changing text to uppercase,lowercase,none,capitilize
+
+8.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
