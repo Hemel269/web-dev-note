@@ -10,33 +10,33 @@ conten border = border
 space between border and content= padding
 one contet to other content space = margin
 
-1.hight:
+1.hight:                                                                              //hight
 use for selecting content hight.
 div {
   height: 100px;
 }
 i am using div
 
-2.widght:
+2.widght:                                                                          //widght
 use for selecrting content width
 div {
   width: 100px;
 }
 
-3.Border:
+3.Border:                                                                                        //border
 for selecting border element
 
 ^^ border: if you use these you can control these three things by one line
-^^border-weidght: use for giving border weight
-^^border-color : use for selecting border color
-^^border-style: use for border style like dotted,solid,dashed
+^^border-weidght: use for giving border weight                                                        //weidght
+^^border-color : use for selecting border color                                                        //border color
+^^border-style: use for border style like dotted,solid,dashed                                        //border-style
 exm:
 div {
   border-width: 2px;
   border-color: brown;
   border-style: dotted;
 }
-^^border-radious: 
+^^border-radious:                                                                       //border-radious
 it use for making box edge soft or round.
 you can use it by px or %
 
@@ -45,20 +45,20 @@ you can use it by px or %
 like if i select text alignmet on center it will make the text in center
 
 
-4. Padding:
+4. Padding:                                                                                    //padding
 it use for some gap between content and border.
 and it have side right left top buttom
 you can select px for left right tip bottom
 lastly if you give only paddaing px value it will auto select lrtb all same value.
 
-5. Margin:
+5. Margin:                                                                                      //margin
 its is use for gapping one box to second box
 it also have left right top buttom
 you can give it via px
 and only margin is give you symitrical shape to box to box
 
 
-Practice question:
+Practice question:                                                          //making amazon navbar
 1.create a navigation bar using these:
 
 * {
@@ -80,6 +80,18 @@ button {
 a {
   margin-right: 200px;
 }
+
+
+##Display properties:                                              //display properties
+
+display: to change these element
+inline/block/inline block/none
+
+^^inline: it just take how much space it content will take no paddind or margin
+^^block: its take blok like area have padding and margin
+^^inline block: its like inline but you can use padding and margin
+^^none: use for remove element
+
 
 
 
