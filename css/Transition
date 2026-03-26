@@ -1,1 +1,23 @@
-.
+transition is someting when content go one state to another.
+llike you can set some hover property.
+
+div {
+  background-color: antiquewhite;
+  height: 100px;
+  width: 100px;
+}
+div:hover {
+  background-color: black;
+}
+
+here when you hover it will be instantly black.
+after using transition you can control the delay or some style to change.
+
+div {
+  background-color: antiquewhite;
+  height: 100px;
+  width: 100px;
+  transition: all 1s ease;
+}
+in here i used the transition : property,duration,style
+
