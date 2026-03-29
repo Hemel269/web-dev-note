@@ -27,6 +27,51 @@ we can acess tham by adding tag name.
 let a = document.getElementsByTagName('tag name')
 
 4. by query:
+you can use it for all of them like by id class or tag.
+for class use dot(.) before it and for id use # before but all function will not work in id cuz its make no sence.
+
+const firstButton = document.querySelector("button"); // first match
+const allButtons = document.querySelectorAll("button"); // NodeList of all buttons
+
+
+##Changing and upgrading:
+^^first you have to access the html in js by using upper four method than it will be work.
+
+1.tagName ; its just return the tag name of html.
+console.log(element.tagName)
+
+it will show the tag name.
+
+2.innerText :
+it return the all element of html also the children.
+console.log(div.innerText)
+
+for more navigation you can use firstChild or lastChild .
+
+^^for change the value:
+div.innerText= "abcd" ;
+now dive all text changed to abcd.
+
+3.innerHtml:
+use to see the text with tag like html.
+div.innerHtml
+
+for change 
+div.innerHtml = "<div> abcd </div>
+
+
+4.textContent:
+use for see the text but it also show the hidden element.
+
+
+## attribute change:
+const link = document.querySelector("a");
+
+// Change href
+link.href = "https://www.google.com";
+link.textContent = "Go to Google";
+
+
 
 
 
