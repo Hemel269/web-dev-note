@@ -1,0 +1,33 @@
+dom = documents object model
+HTML page is like a tree and DOM is use for talk to the tree.
+
+^^HTML is saved in our js by name documents.
+and you will use it to change the html.
+
+^^console.log(document);
+you can see the html by printing the documents in js.
+
+so besically dom is used for daynamic change in our web pages.
+
+##Acessesing Elements:
+
+1.by id :
+use for acess element by html id.
+let heading = document.getElementById("id name");
+console.log(heading);
+console.dir(heading);
+
+2.by class:
+use for acess element by html class.
+let p = document.getElementsByClassName("header");
+console.log(p);
+
+3.by tag:
+we can acess tham by adding tag name.
+let a = document.getElementsByTagName('tag name')
+
+4. by query:
+
+
+
+
