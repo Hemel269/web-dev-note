@@ -1,3 +1,4 @@
+Date:29/03/26 and 30/03/26
 dom = documents object model
 HTML page is like a tree and DOM is use for talk to the tree.
 
@@ -65,11 +66,85 @@ use for see the text but it also show the hidden element.
 
 
 ## attribute change:
+use for change or get the attribute value.
+
 const link = document.querySelector("a");
 
 // Change href
 link.href = "https://www.google.com";
 link.textContent = "Go to Google";
+
+//getAttribute:
+use for get the attribute.
+first display the node which attribute you wanna get.
+
+let attribute= node.getAttribute("attribute name")
+
+//set attribute:
+you can set the attribute name
+
+let attribute= node.setAttribute(" old name" , "new name");
+
+//node.style:
+its use for change the style it work on inpage style only.
+
+div.style.backgroundColor= "red"
+you can use it like css just remove the hifen or vs code will auto show you 
+
+
+## insert element or create element;
+use for insert new element. it work in 2 step
+1.first you create the element
+2.than add in node.
+
+
+//creation:
+let newButton= document.createElement("what you wanna create"):
+neweButton.innerText= "touch me"
+
+here first we create a button and than we give a text inside it.
+
+//addition:                                                                                       
+1.node.append(element)         // for adding in last of the node(inside)
+2.node.prepend(element)         //for starting the node(inside)
+3.node.before(element)           // adds just before the node(outside)
+4.node.after(element)             //add just after the node (outside)
+
+for example:
+first select the node.
+let div= querryselector('div)
+
+than add into it.
+div.after("newButton)
+
+another expample:
+let newHadding = document.createElement("h1");             //create the element
+newHadding.innerText = "hellow brow";                      // give the innertext
+
+document.querySelector("body").prepend(newHadding);        //inside body tag we pretend the new element
+
+// Next challenge for you:
+👉 Create a <p> tag
+👉 Add some text
+👉 Add it below the h1
+
+ans:
+let newP = document.createElement("p");
+newP.innerText = "this is my paragraph";
+
+document.querySelector("h1").after(newP);
+
+
+## delete the element;                                                                      //deleting element
+use for deleting element
+
+first acess the element in js
+than
+
+//node.remove()
+
+
+
 
 
 
