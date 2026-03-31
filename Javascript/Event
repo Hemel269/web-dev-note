@@ -1,0 +1,28 @@
+Event is something is happened on your page.
+you pressed a button its an event
+you move your mouse its an event
+
+now we will learn how to handle the event...
+
+##event listenter
+by using this you will handle the evennt
+
+element.addEventListener("event", function)
+
+in here first you will declare the event like is it click mouse over or etc.
+than you deploy the function for what you wanna do...
+
+example:
+
+let btn = document.querySelector("button");                  // button selected by dom
+
+btn.addEventListener("click", function() {                  //using the click event and using the arrow function for execution
+    console.log("Button clicked!");
+});
+
+##some of common event:
+"click" → user clicks
+"mouseover" → mouse goes over
+"mouseout" → mouse leaves
+
+##
