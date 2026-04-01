@@ -1,0 +1,58 @@
+## Count increase,decreace and reset and Change the color of the count..
+
+##HTML code:
+
+   <h1 id="count">Count: 0</h1>
+
+    <button id="increase">+</button>
+    <button id="decrease">-</button>
+    <button id="reset">Reset</button>
+
+
+## Js logic : DOM and Event
+
+let count = document.querySelector("#count");
+let increase = document.querySelector("#increase");              //acess the increase
+let decrease = document.querySelector("#decrease");              //acess the decrease
+let reset = document.querySelector("#reset");                    //acess the reset
+
+let a = 0;
+
+function update() {                                            //creating the function for easy ui 
+  count.innerText = `Count: ${a}`;
+
+  if (a === 0) {
+    count.style.color = "black";
+  } else if (a >= 5) {
+    count.style.color = "red";
+  } else {
+    count.style.color = "black";
+  }
+}
+increase.addEventListener("click", () => {                        //increase event
+  a++;
+  update();
+});
+
+decrease.addEventListener("click", () => {
+  if (a > 0) {
+    a--;
+  }
+  update();
+});
+
+reset.addEventListener("click", () => {
+  a = 0;
+  update();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowUp") {
+    a++;
+  } else if (event.key === "ArrowDown") {
+    if (a > 0) a--;
+  } else if (event.key === "r") {
+    a = 0;
+  }
+
+  update();
+});
