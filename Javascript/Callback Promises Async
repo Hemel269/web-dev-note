@@ -79,6 +79,17 @@ function promise(){                                                //created fun
 
 ^^Promise have 3 state : penidng ,resolved and reject ..\
 we can acess promise by ....
+.then and .catch
+
+
+
+
+
+## Async and Await:
+Async is a function who return a promise.
+Await means wait, it just stop the execution of async after finishing one it go for 2nd then 3rd..
+and Await only write on Async function not anyother place..
+
 
 
 
