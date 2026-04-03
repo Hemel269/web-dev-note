@@ -1,0 +1,94 @@
+Date: 04/03/26
+
+These things are use for waiting and execute remain code...
+For example suppose you have some large data ,file loading and api intrigation this time for their respose you have to wait for some moment..
+and if your code is waiting then rest of the code will be also wait for it so if you use Callback,Promises and Async you can wait this single data collection
+not whole code...
+
+Three way you can do this and Mostly use is Async 
+cuz Callback and pormises have some problem for using big thigs..
+Async>>Promises>>Callback..
+
+## Callback(old way):
+Callback is when we call a function inside a function...
+
+function getData(dataid) {                                    //created a function getData.
+  setTimeout(() => {                                          //setTimeout is a function use for delaying time..
+    console.log("data:", dataid);
+  }, 4000);                                                    //1000ms = 1 sec so here is 4 sec delay..
+}
+
+in here we use a funtion inside a function and its a callback..
+setTimeout is a function and we use insde another arrow function..
+
+^^setTimeout syntex: 
+setTimeout(() => {
+    
+}, timeout);
+or
+setTimeout(work,timeout)
+
+## let undrestand callback hell :
+
+function getData(dataId, getNextdata) {
+  setTimeout(() => {                                         // Wait 2 seconds before running the function
+    console.log(dataId);                                 // Print the current dataId 
+    if (getNextdata) {                                    // If there is a "next function" provided, call it
+      getNextdata();                                     // Go to the next step
+    }
+  }, 2000);
+}
+
+// Start the chain
+getData(1, () => {       // Step 1: print 1 after 2 sec
+  getData(2, () => {     // Step 2: print 2 after 2 sec
+    getData(3, () => {   // Step 3: print 3 after 2 sec
+      getData(4);        // Step 4: print 4 after 2 sec (no next function)
+    });
+  });
+});
+
+so it will print 1 wait 2 sec print 2 wait 2 sec like this..
+its look so messy so its called callback hell..
+
+another example but useing string:
+
+function sayHello(name, next) {
+  setTimeout(() => {
+    console.log(name);
+    if (next) {
+      next();
+    }
+  }, 1000);
+}
+//callback hell
+sayHello("alice", () => {
+  sayHello("bob", () => {
+    sayHello("chirlie");
+  });
+});
+
+## Promises:
+Promise is promise its maken by any api who give use promise for data or something...
+function promise(){                                                //created function named promise
+    return new Promise((resolve, reject) => {                      //promise always return resolve or reject
+                                                                    //in this gap we will add the timeout.and inside timeout what we wanna print
+    })
+}
+
+
+^^Promise have 3 state : penidng ,resolved and reject ..\
+we can acess promise by ....
+
+
+
+
+
+
+
+
+
+
+
+
+
