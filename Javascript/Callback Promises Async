@@ -88,12 +88,45 @@ we can acess promise by ....
 ## Async and Await:
 Async is a function who return a promise.
 Await means wait, it just stop the execution of async after finishing one it go for 2nd then 3rd..
-and Await only write on Async function not anyother place..
+and Await only write on Async function not anywhere more..
+
+For example:
+This is my promise and the delay time ..
+
+function task() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Done");
+    }, 2000);
+  });
+}
+
+// This is how you will use the Async and await..
+
+async function run() {                              //this is async function
+  const result = await task();                        //it return the promise so you have to put it into a variable in here its result
+  console.log(result);                                //function will print the result
+}
+
+run();                                          //finally you call the function.
 
 
+//Parallekl example fast:
+async function run() {
+  const [a, b] = await Promise.all([task1(), task2()]);              //you just use the Promise.all and then what you want..
+}
 
 
+//Error handling:
 
+async function run() {
+  try {                                                            //use try for error
+    const res = await task();
+    console.log(res);
+  } catch (err) {                                                          //use catch()
+    console.log(err);
+  }
+}
 
 
 
