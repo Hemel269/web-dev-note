@@ -1,1 +1,14 @@
+Date: 4/24/26
+install node.js from chrome.
+now go any folder and open it with vs code.
+
+now on vs code cmd pannel write:
+npx create-react-app . (use . if you wanna create react on this folder)
+
+
+and than you will get your react folder and you will work here..
+now you can run into in chrome just write this on cmd
+npm start
+
+and in this folder we will work in src.. there will be our full code..
 
