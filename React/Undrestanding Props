@@ -1,1 +1,98 @@
+Date: 5/22/26
+Sheet
+What are Props?
+Props (Properties) are used to pass data from a parent component to a child component.
+
+Think of props as:
+Function arguments for components
+Read-only data
+A way to make components reusable
+
+## Key Idea
+Parent Component  ➜  sends data (props)  ➜  Child Component receives data
+#Basic Example
+
+^^Parent Component (App.jsx)
+
+import React from "react";                    //Example for how to use it
+import Card from "./Card";
+
+const App = () => {
+  return (
+    <>
+      <Card name="Hemel" age={20} />
+      <Card name="John" age={25} />
+      <Card name="Sara" age={22} />
+    </>
+  );
+};
+
+export default App;
+
+^^Child Component (Card.jsx)
+import React from "react";                  //Example of how to use on child 
+
+const Card = (props) => {
+  return (
+    <div>
+      <h2>Name: {props.name}</h2>
+      <p>Age: {props.age}</p>
+    </div>
+  );
+};
+
+export default Card;
+
+Cleaner Way (Destructuring Props)                            //Best way to use it.
+Instead of props.name, we extract values directly:
+
+const Card = ({ name, age }) => {
+  return (
+    <div>
+      <h2>Name: {name}</h2>
+      <p>Age: {age}</p>
+    </div>
+  );
+};
+
+export default Card;
+
+How Props Work Internally
+1. Parent defines data
+2. Data is passed as attributes
+3. Child receives data as function parameter
+4. React renders UI using that data
+
+Real-Life Example
+<UserCard name="iPhone 15" price={1200} />
+<UserCard name="Samsung S24" price={1100} />
+
+Same component → different data → reusable UI
+
+## Rules of Props
+✔ Props are read-only (cannot be changed in child)
+✔ Props flow ONLY from parent → child
+✔ Props make components reusable
+✔ Props can be string, number, array, object, function
+
+Common Mistakes
+Changing props inside child component
+Forgetting to pass props
+Using props without {}
+Confusing props with state
+
+Props:
+→ Passed from parent
+→ Cannot be changed
+→ External data
+
+
+Props = “Data coming from outside”
+
+Final Understanding
+Props = way to pass data to components so they become reusable and dynamic
+
+One-line summary
+ “Props are how React components talk to each other.”
+
 
