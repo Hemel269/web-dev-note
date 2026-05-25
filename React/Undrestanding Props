@@ -95,4 +95,192 @@ Props = way to pass data to components so they become reusable and dynamic
 One-line summary
  “Props are how React components talk to each other.”
 
+here is a example of props , using array/json file:
+Card.Jsx
+import React from "react";
+
+const Card = ({ com, date, post, tag1, tag2, pay, location }) => {
+  return (
+    <div>
+      {/* card */}
+      <div className="bg-white rounded-3xl p-6 shadow-lg w-[300px] hover:scale-105 transition duration-300">
+        {/* top section */}
+        <div className="flex justify-between items-center">
+          {/* company logo */}
+          <div className="w-14 h-14 bg-gray-100 flex justify-center items-center rounded-full">
+            🚀
+          </div>
+
+          {/* bookmark */}
+          <div className="bg-gray-100 px-4 py-2 rounded-xl cursor-pointer">
+            📌
+          </div>
+        </div>
+
+        {/* company name + date */}
+        <div className="flex items-center gap-2 text-gray-400 mt-4">
+          <p className="font-bold text-black text-lg">{com}</p>
+          <p className="text-xs">{date}</p>
+        </div>
+
+        {/* job title */}
+        <div className="text-2xl font-bold mt-4">{post}</div>
+
+        {/* tags */}
+        <div className="flex gap-3 mt-4">
+          <div className="bg-gray-200 font-semibold text-xs px-4 py-2 rounded-xl">
+            {tag1}
+          </div>
+
+          <div className="bg-gray-200 font-semibold text-xs px-4 py-2 rounded-xl">
+            {tag2}
+          </div>
+        </div>
+
+        {/* divider */}
+        <div className="border-t my-8"></div>
+
+        {/* bottom section */}
+        <div className="flex justify-between items-center">
+          {/* salary + location */}
+          <div>
+            <div className="text-lg font-semibold">{pay}</div>
+
+            <div className="text-gray-400 text-sm">{location}</div>
+          </div>
+
+          {/* apply button */}
+          <button className="bg-black text-white px-4 py-2 rounded-xl hover:bg-gray-800 transition">
+            Apply now
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Card;
+
+
+App.jsx:
+import React from "react";
+
+import Navbar from "./components/Navbar";
+import Anonav from "./components/Anonav";
+import Card from "./components/Card";
+import New from "./components/New";
+
+const App = () => {
+  const jobs = [
+    {
+      brandLogo: "https://logo.clearbit.com/google.com",
+      company: "Google",
+      datePosted: "5 days ago",
+      post: "Frontend Developer",
+      tag1: "Full-time",
+      tag2: "Junior Level",
+      pay: "$45/hr",
+      location: "Bangalore, India",
+    },
+    {
+      brandLogo: "https://logo.clearbit.com/apple.com",
+      company: "Apple",
+      datePosted: "2 weeks ago",
+      post: "UI/UX Engineer",
+      tag1: "Full-time",
+      tag2: "Senior Level",
+      pay: "$70/hr",
+      location: "California, USA",
+    },
+    {
+      brandLogo: "https://logo.clearbit.com/microsoft.com",
+      company: "Microsoft",
+      datePosted: "1 week ago",
+      post: "React Developer",
+      tag1: "Part-time",
+      tag2: "Mid Level",
+      pay: "$50/hr",
+      location: "Hyderabad, India",
+    },
+    {
+      brandLogo: "https://logo.clearbit.com/amazon.com",
+      company: "Amazon",
+      datePosted: "10 days ago",
+      post: "Backend Developer",
+      tag1: "Full-time",
+      tag2: "Senior Level",
+      pay: "$65/hr",
+      location: "Seattle, USA",
+    },
+    {
+      brandLogo: "https://logo.clearbit.com/meta.com",
+      company: "Meta",
+      datePosted: "3 days ago",
+      post: "Full Stack Engineer",
+      tag1: "Remote",
+      tag2: "Junior Level",
+      pay: "$55/hr",
+      location: "London, UK",
+    },
+    {
+      brandLogo: "https://logo.clearbit.com/netflix.com",
+      company: "Netflix",
+      datePosted: "4 weeks ago",
+      post: "Software Engineer",
+      tag1: "Full-time",
+      tag2: "Senior Level",
+      pay: "$80/hr",
+      location: "Los Angeles, USA",
+    },
+    {
+      brandLogo: "https://logo.clearbit.com/nvidia.com",
+      company: "NVIDIA",
+      datePosted: "6 days ago",
+      post: "AI Engineer",
+      tag1: "Internship",
+      tag2: "Junior Level",
+      pay: "$40/hr",
+      location: "Toronto, Canada",
+    },
+    {
+      brandLogo: "https://logo.clearbit.com/adobe.com",
+      company: "Adobe",
+      datePosted: "2 months ago",
+      post: "MERN Developer",
+      tag1: "Contract",
+      tag2: "Mid Level",
+      pay: "$48/hr",
+      location: "Mumbai, India",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-amber-100">
+      <Anonav />
+      <div>
+        <div className="min-h-screen flex flex-wrap gap-2 bg-amber-100 p-4 justify-center">
+          {jobs.map((elem, index) => {
+            return (
+              <Card
+                key={index}
+                brandLogo={elem.brandLogo}
+                com={elem.company}
+                date={elem.datePosted}
+                post={elem.post}
+                tag1={elem.tag1}
+                tag2={elem.tag2}
+                pay={elem.pay}
+                location={elem.location}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
+
 
