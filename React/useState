@@ -1,0 +1,392 @@
+# React useState Hook Notes
+
+## What is useState?
+
+useState is a React Hook that allows us to store and update data inside a component.
+
+When the data changes, React automatically updates the UI.
+
+Syntax:
+
+```jsx
+const [state, setState] = useState(initialValue);
+```
+
+- state = current value
+- setState = function to update value
+- initialValue = starting value
+
+---
+
+## Step 1: Import useState
+
+```jsx
+import React, { useState } from "react";
+```
+
+---
+
+## Step 2: Create State
+
+```jsx
+const [count, setCount] = useState(0);
+```
+
+Initially:
+
+```jsx
+count = 0
+```
+
+---
+
+## Step 3: Display State
+
+```jsx
+<h1>{count}</h1>
+```
+
+---
+
+## Step 4: Update State
+
+```jsx
+setCount(count + 1);
+```
+
+React updates the value and re-renders the component.
+
+---
+
+# Simple Counter Example
+
+```jsx
+import React, { useState } from "react";
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  function increase() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <h1>{count}</h1>
+
+      <button onClick={increase}>
+        Increase
+      </button>
+    </div>
+  );
+};
+
+export default App;
+```
+
+---
+
+# Best Practice (Previous Value)
+
+Instead of:
+
+```jsx
+setCount(count + 1);
+```
+
+Use:
+
+```jsx
+setCount(prev => prev + 1);
+```
+
+Example:
+
+```jsx
+function increase() {
+  setCount(prev => prev + 1);
+}
+```
+
+---
+
+# Counter App
+
+```jsx
+import React, { useState } from "react";
+
+const App = () => {
+  const [num, setNum] = useState(0);
+
+  return (
+    <div>
+      <h1>{num}</h1>
+
+      <button onClick={() => setNum(prev => prev + 1)}>
+        +
+      </button>
+
+      <button onClick={() => setNum(prev => prev - 1)}>
+        -
+      </button>
+
+      <button onClick={() => setNum(0)}>
+        Reset
+      </button>
+    </div>
+  );
+};
+
+export default App;
+```
+
+---
+
+# useState with String
+
+```jsx
+const [name, setName] = useState("Najim");
+```
+
+Display:
+
+```jsx
+<h1>{name}</h1>
+```
+
+Update:
+
+```jsx
+setName("Shahrea");
+```
+
+---
+
+# useState with Boolean
+
+```jsx
+const [show, setShow] = useState(false);
+```
+
+Toggle:
+
+```jsx
+setShow(!show);
+```
+
+Example:
+
+```jsx
+{
+  show && <h1>Hello World</h1>;
+}
+```
+
+Button:
+
+```jsx
+<button onClick={() => setShow(!show)}>
+  Toggle
+</button>
+```
+
+---
+
+# useState with Input
+
+```jsx
+import React, { useState } from "react";
+
+const App = () => {
+  const [name, setName] = useState("");
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+
+      <h1>{name}</h1>
+    </div>
+  );
+};
+
+export default App;
+```
+
+Flow:
+
+User Types
+↓
+onChange
+↓
+setName()
+↓
+State Updates
+↓
+UI Updates
+
+---
+
+# useState with Object
+
+```jsx
+const [user, setUser] = useState({
+  name: "Najim",
+  age: 21,
+});
+```
+
+Display:
+
+```jsx
+<h1>{user.name}</h1>
+<h1>{user.age}</h1>
+```
+
+Update:
+
+```jsx
+setUser({
+  ...user,
+  age: 22,
+});
+```
+
+Why use ...user?
+
+Because React replaces the whole object.
+
+Wrong:
+
+```jsx
+setUser({ age: 22 });
+```
+
+Result:
+
+```jsx
+{
+  age: 22
+}
+```
+
+name gets deleted.
+
+---
+
+# useState with Array
+
+```jsx
+const [items, setItems] = useState([]);
+```
+
+Add item:
+
+```jsx
+setItems([...items, "Apple"]);
+```
+
+Add another:
+
+```jsx
+setItems([...items, "Mango"]);
+```
+
+Display:
+
+```jsx
+{
+  items.map((item, index) => (
+    <li key={index}>{item}</li>
+  ));
+}
+```
+
+---
+
+# Rules of useState
+
+✅ Correct
+
+```jsx
+const [count, setCount] = useState(0);
+```
+
+❌ Wrong
+
+```jsx
+if (true) {
+  const [count, setCount] = useState(0);
+}
+```
+
+Never use Hooks inside:
+
+- if statements
+- loops
+- nested functions
+
+Always place Hooks at the top of the component.
+
+---
+
+# Most Common Pattern
+
+```jsx
+const [data, setData] = useState(initialValue);
+```
+
+Examples:
+
+```jsx
+const [count, setCount] = useState(0);
+
+const [name, setName] = useState("");
+
+const [show, setShow] = useState(false);
+
+const [users, setUsers] = useState([]);
+
+const [person, setPerson] = useState({});
+```
+
+---
+
+# 30-Second Revision
+
+```jsx
+1. Import useState
+
+import { useState } from "react"
+
+2. Create state
+
+const [value, setValue] = useState(initialValue)
+
+3. Display state
+
+{value}
+
+4. Update state
+
+setValue(newValue)
+
+5. React automatically updates the UI
+```
+
+Main Flow:
+
+```text
+User Action
+    ↓
+setState()
+    ↓
+State Changes
+    ↓
+React Re-renders
+    ↓
+UI Updates
+```
